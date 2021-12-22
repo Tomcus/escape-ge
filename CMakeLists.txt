@@ -6,7 +6,6 @@ include(cmake/options.cmake)
 include(cmake/project_settings.cmake)
 include(cmake/testing.cmake)
 include(cmake/raylib.cmake)
-include(cmake/fmt.cmake)
 
 add_subdirectory(src)
 

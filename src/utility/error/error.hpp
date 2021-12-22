@@ -5,15 +5,15 @@
 #include <string>
 #include <exception>
 #include <string_view>
-#include <fmt/core.h>
+#include "ray.hpp"
 #include <source_location>
 
+/// FIXME: Improve the trace log function to include function and line number.
 /// Custom assert function
 #define ASSERT(expression, message)\
 {\
-    auto _sl = std::source_location::current();\
     if (!(expression)) {\
-        fmt::print("ASSERT({}) failed: {}\nat {} in {}", #expression, message, _sl.function_name(), _sl.file_name());\
+        TraceLog(LOG_FATAL, "Assertion (" #expression ") failed: " message "\nin " __FILE__);\
         exit(1);\
     }\
 }
