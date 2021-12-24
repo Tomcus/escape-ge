@@ -1,7 +1,7 @@
 #ifndef ESCAPE_GAME_HPP
 #define ESCAPE_GAME_HPP
 
-#include "game_data/game_data.hpp"
+#include "game_state/game_state.hpp"
 #include "error/error.hpp"
 #include "input/event.hpp"
 #include <fmt/core.h>
