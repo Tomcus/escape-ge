@@ -12,7 +12,7 @@
 namespace esc::data {
 
 template<typename Type>
-class DefaultOrderer {
+struct DefaultOrderer {
     inline int operator()(const Type& a, const Type & b) const noexcept {
         if (a < b) {
             return -1;
@@ -150,7 +150,7 @@ public:
     }
 
 protected:
-    static Orderer orderer{};
+    constexpr static Orderer orderer{};
     std::vector<Type> data;
 };
 }
